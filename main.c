@@ -4,7 +4,7 @@ Started from : 3/10/2023 (  7: 39 PM)
 Ended at     : 4/10/2023 ( 11: 44 PM)
 
 Creator : LIM CUAN HEI
-Class   : DFT Y1S1 (year 2023)
+Class   : DFT Y1S1 Group 7 (year 2023)
 
 Hour total spend : less than 24 (hour)
 
