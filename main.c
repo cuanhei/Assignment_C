@@ -16,6 +16,9 @@ Hour total spend : less than 24 (hour)
 
 */
 
+// YouTube video 
+// https://youtu.be/_QHUAPbdjC8?si=QrYY6kdhHFx5oHlm
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -54,7 +57,6 @@ char lastUpdate[100];
 time_t t;
 
 
-
 void main() {
 	int i, x;
 	intro();
@@ -71,7 +73,6 @@ void main() {
 			strcpy(STUDENTCOURSE[i][x], "       ");
 			strcpy(STUDENTGRADE[i][x], "  ");
 		}
-
 	}
 	menu();
 }
@@ -277,9 +278,8 @@ void generateMarks() {
 	}
 	else
 		inputResult(indexStudent);
-
-
 }
+
 void resultTable(char course[6][8], char grade[6][3], float gpa[4]) {
 	printf(" _________________________________________________ \n");
 	printf("|Result                                           |\n");
@@ -305,6 +305,7 @@ void resultTable(char course[6][8], char grade[6][3], float gpa[4]) {
 	printf("CGPA           > %.2f\n", gpa[3]);
 
 }
+
 void inputResult(int indexStudent) {
 	int i = 0, valid = 0, hour21 = 0;
 	char course[8], grade[2], lastChar;
@@ -411,6 +412,7 @@ void inputResult(int indexStudent) {
 	rewind(stdin);
 	adminPage();
 }
+
 int courseValidation(char courseCode[8], char grade[3]) {
 	if (strlen(courseCode) != 7) {
 		printf("[Invalid course]");
@@ -427,6 +429,7 @@ int courseValidation(char courseCode[8], char grade[3]) {
 
 	return creditHourValidation(courseCode[6]);
 }
+
 float gradeConvertor(char grade[3]) {
 	if (strcmp(grade, "A") == 0)
 		return 4.0;
@@ -445,6 +448,7 @@ float gradeConvertor(char grade[3]) {
 	else
 		return 0;
 }
+
 int creditHourValidation(char courseCode) {
 	switch (courseCode) {
 	case'1':
@@ -464,6 +468,7 @@ int creditHourValidation(char courseCode) {
 		return 1;
 	}
 }
+
 int creditHourConvertor(char hour) {
 	switch (hour) {
 	case'1':
@@ -497,6 +502,7 @@ int creditHourConvertor(char hour) {
 		return 0;
 	}
 }
+
 void studentInformation(int studentIndex) {
 	system("cls");
 	logo();
@@ -534,6 +540,7 @@ void studentInformation(int studentIndex) {
 		adminPage();
 	}
 }
+
 void removeStudent(int studentIndex) {
 	char yesNo;
 	system("cls");
@@ -569,6 +576,7 @@ void removeStudent(int studentIndex) {
 		removeStudent(studentIndex);
 	}
 }
+
 void student() {
 	int select;
 	char studentID[10], studentPswd[50];
@@ -608,6 +616,7 @@ void student() {
 		student();
 	}
 }
+
 void studentRegister() {
 	int i, birthValid = 0, programmeValid = 0;
 	char name[50], birth[11], course[8], password[50];
